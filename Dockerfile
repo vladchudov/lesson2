@@ -1,5 +1,6 @@
-FROM ruby:2.2.0
-WORKDIR /home/ruby
-COPY . /home/ruby/
+FROM ruby:2.2.10
+RUN mkdir /app
+WORKDIR /app
+ADD . /app
 RUN bundle install
-CMD bundle exec puma config.ru -p 90
+CMD bundle exec puma config.ru -p 8080

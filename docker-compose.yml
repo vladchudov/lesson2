@@ -1,0 +1,15 @@
+version: "2"
+
+services:configs:
+  ruby:
+    image: mdsn/1811
+    ports:
+      - 8080:8080
+    environment:
+      - TEXT=FIRST
+  ruby2:
+    image: mdsn/1811
+    ports:
+      - 8081:8080
+    environment:
+      - TEXT=SECOND
